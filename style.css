@@ -60,7 +60,7 @@ nav a:hover {
     background-image: url("hero-image.jpg"); /* Replace with your hero image */
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: #333; /* Changed to black */
     text-align: center;
     padding: 8rem 0;
 }.hero.container {
@@ -98,6 +98,7 @@ nav a:hover {
     border-bottom: 3px solid #007bff;
     padding-bottom: 0.8rem;
     font-size: 2rem;
+    color: #333; /* Changed to black */
 }.about-content {
     display: flex;
     align-items: flex-start;
@@ -257,10 +258,16 @@ footer a:hover {
     }
 
   .about-content {
-        flex-direction: column; /* Stack image and text vertically */
-        align-items: center; /* Center horizontally */
-        text-align: center; /* Center text within the about section */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
   .headshot {
-        margin-bottom: 2rem; /*
+        margin-bottom: 2rem;
+    }
+
+  .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
