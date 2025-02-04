@@ -13,7 +13,6 @@ my @projects = (
         short_description => 'A comprehensive platform for users to achieve their holistic health goals.',
         long_description  => 'This health and wellness app, built using Java and Swift, provides a comprehensive platform for users to achieve their holistic health goals. It features personalized profiles, allowing users to track their exercise routines, meditation practices, and dietary habits. The app also includes helpful reminders to maintain consistency and an AI coach to provide personalized guidance and support.',
         technologies        => 'Java, Swift',
-        image              => '', # Add image path if available
         link               => '#'
     },
     {
@@ -21,7 +20,6 @@ my @projects = (
         short_description => 'An advanced application empowering users to make informed investment decisions with AI-driven insights.',
         long_description  => 'CoinSentinel is an advanced cryptocurrency tracking and analysis application that empowers users to make informed investment decisions with AI-driven insights. Built with Python, CoinSentinel provides a real-time market overview, portfolio management tools, and leverages machine learning to deliver accurate 24-hour and 48-hour price predictions. It also incorporates sentiment analysis to gauge market trends and offers custom price alerts and cryptocurrency news aggregation to keep users ahead of the curve. Gain a competitive edge with CoinSentinel\'s live analytics and predictive capabilities.',
         technologies        => 'Python, Machine Learning',
-        image              => '', # Add image path if available
         link               => '#'
     },
     {
@@ -29,7 +27,6 @@ my @projects = (
         short_description => 'A full-stack web application for efficient project, task, and note management.',
         long_description  => 'Project Tracker is a full-stack web application designed to help users manage their projects, tasks, and notes efficiently. It provides a user-friendly interface built with React and Material UI for creating, viewing, updating, and deleting projects. The backend is powered by Node.js and Express, with a PostgreSQL database for persistent data. It includes features for user authentication, project management, task management, and note-taking, all within a responsive design.',
         technologies        => 'React, Material UI, Node.js, Express, PostgreSQL',
-        image              => '', # Add image path if available
         link               => '#'
     }
 );
