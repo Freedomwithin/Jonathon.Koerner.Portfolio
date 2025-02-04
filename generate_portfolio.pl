@@ -2,26 +2,70 @@ use strict;
 use warnings;
 use HTML::Template;
 
+# Your data
 my $name = 'Jonathon Koerner';
-my $bio = 'A passionate developer with expertise in Perl, web development, and automation. I enjoy problem-solving and am always eager to learn new technologies.';
+my $bio = 'I\'m a passionate full-stack developer with a decade of experience building high-performing websites and mobile applications. I thrive on turning complex challenges into elegant, user-centric solutions. My expertise spans a wide range of technologies, including Python (with frameworks like Django and FastAPI), JavaScript (including React and Angular), and various database systems. I\'ve successfully developed mobile applications for diverse sectors, from cryptocurrency analysis and prediction tools to health and wellness platforms, always focusing on maximizing user engagement and achieving client business objectives.
+
+My background in high-volume business operations, coupled with my training and development experience, gives me a unique understanding of client needs. I leverage this blend of technical and business acumen to translate those needs into effective solutions, ensuring seamless user adoption. I\'m adept at both front-end and back-end development, creating robust and scalable applications with clean code and a focus on maintainable architecture. I also bring strong communication and project management skills to every project, ensuring on-time and within-budget delivery. I enjoy continuous learning and am always eager to explore new technologies and expand my skillset.';
 my @projects = (
-    { title => 'Crypto Prediction and Analysis Bot', description => 'Developing a bot that predicts and analyzes cryptocurrency trends using machine learning algorithms.' },
-    { title => 'Concise Programming Language', description => 'Creating my own programming language called Concise, designed to be easy to learn and use while being powerful and efficient.' },
-    { title => 'Web Development Projects', description => 'Developing multiple websites with a focus on modern design, user experience, and performance optimization.' },
+    {
+        title               => 'Flourish - Health and Wellness Application',
+        short_description => 'A comprehensive platform for users to achieve their holistic health goals.',
+        long_description  => 'This health and wellness app, built using Java and Swift, provides a comprehensive platform for users to achieve their holistic health goals. It features personalized profiles, allowing users to track their exercise routines, meditation practices, and dietary habits. The app also includes helpful reminders to maintain consistency and an AI coach to provide personalized guidance and support.',
+        technologies        => 'Java, Swift',
+        image              => '', # Add image path if available
+        link               => '#'
+    },
+    {
+        title               => 'CoinSentinel - Cryptocurrency Tracking and Analysis',
+        short_description => 'An advanced application empowering users to make informed investment decisions with AI-driven insights.',
+        long_description  => 'CoinSentinel is an advanced cryptocurrency tracking and analysis application that empowers users to make informed investment decisions with AI-driven insights. Built with Python, CoinSentinel provides a real-time market overview, portfolio management tools, and leverages machine learning to deliver accurate 24-hour and 48-hour price predictions. It also incorporates sentiment analysis to gauge market trends and offers custom price alerts and cryptocurrency news aggregation to keep users ahead of the curve. Gain a competitive edge with CoinSentinel\'s live analytics and predictive capabilities.',
+        technologies        => 'Python, Machine Learning',
+        image              => '', # Add image path if available
+        link               => '#'
+    },
+    {
+        title               => 'Project Tracker',
+        short_description => 'A full-stack web application for efficient project, task, and note management.',
+        long_description  => 'Project Tracker is a full-stack web application designed to help users manage their projects, tasks, and notes efficiently. It provides a user-friendly interface built with React and Material UI for creating, viewing, updating, and deleting projects. The backend is powered by Node.js and Express, with a PostgreSQL database for persistent data. It includes features for user authentication, project management, task management, and note-taking, all within a responsive design.',
+        technologies        => 'React, Material UI, Node.js, Express, PostgreSQL',
+        image              => '', # Add image path if available
+        link               => '#'
+    }
 );
 
-# Delete the existing portfolio.html file if it exists (good practice)
-unlink 'portfolio.html' or warn "Could not delete portfolio.html: $!" if -e 'portfolio.html';
+# Generate index.html
+my $index_template = HTML::Template->new(filename => 'templates/index.html');
+$index_template->param(name => $name);
+$index_template->param(
+    hero_description =>
+    'I\'m a website and mobile app developer dedicated to creating exceptional digital experiences. I combine technical expertise with a keen understanding of user experience to build solutions that are both beautiful and effective. My services encompass the full development lifecycle, from initial concept and design to development, testing, and deployment.'
+);
+open my $index_fh, '>', 'index.html' or die "Could not open file: $!";
+print $index_fh $index_template->output;
+close $index_fh;
 
-# Use a RELATIVE path here!  This is the key change.
-my $template = HTML::Template->new(filename => 'template.html');
+# Generate about.html
+my $about_template = HTML::Template->new(filename => 'templates/about.html');
+$about_template->param(name => $name);
+$about_template->param(bio => $bio);
+open my $about_fh, '>', 'about.html' or die "Could not open file: $!";
+print $about_fh $about_template->output;
+close $about_fh;
 
-$template->param(name => $name);
-$template->param(bio => $bio);
-$template->param(projects => \@projects);
+# Generate projects.html
+my $projects_template = HTML::Template->new(filename => 'templates/projects.html');
+$projects_template->param(name => $name);
+$projects_template->param(projects => \@projects);
+open my $projects_fh, '>', 'projects.html' or die "Could not open file: $!";
+print $projects_fh $projects_template->output;
+close $projects_fh;
 
-open my $fh, '>', 'portfolio.html' or die "Could not open file: $!";
-print $fh $template->output;
-close $fh;
+# Generate contact.html
+my $contact_template = HTML::Template->new(filename => 'templates/contact.html');
+$contact_template->param(name => $name);
+open my $contact_fh, '>', 'contact.html' or die "Could not open file: $!";
+print $contact_fh $contact_template->output;
+close $contact_fh;
 
-print "Portfolio generated successfully!\n";
+print "All HTML files generated successfully!\n";
