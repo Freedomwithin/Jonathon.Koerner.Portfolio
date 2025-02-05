@@ -29,6 +29,23 @@ my @projects = (
         technologies        => 'React, Material UI, Node.js, Express, PostgreSQL',
         link               => '#'
     }
+    {
+        title               => 'CulinaryKeeper',
+        short_description => 'A expansive recipe tracker application built with the following technologies:',
+        long_description  => 'CulinaryKeeper is an innovative recipe management application designed for food enthusiasts, home cooks, and professional chefs alike. This user-friendly platform allows you to effortlessly store, organize, and access your favorite recipes from any device. With features like ingredient tracking, meal planning, and smart search capabilities, CulinaryKeeper streamlines your cooking process from start to finish. The app also offers collaborative features, enabling users to share recipes with friends and family, discover new culinary inspirations, and build a personalized digital cookbook. Whether you are looking to preserve cherished family recipes or experiment with new flavors, CulinaryKeeper is your ultimate companion in the kitchen, helping you turn your culinary aspirations into delicious realities.'
+        technologies        => '* **Frontend:**
+    * React: JavaScript library for building user interfaces.
+    * HTML: Markup language for structuring the content.
+    * CSS: Styling language for the visual presentation.
+    * JavaScript: Programming language for the application logic.
+* **Development Tools:**
+    * Node.js: JavaScript runtime environment.
+    * npm or yarn: Package managers for installing dependencies.
+    * create-react-app: Tool for setting up a new React project.
+    * ESLint: Linting tool for code quality and style checking (optional, but recommended).
+    * Git: Version control system for tracking changes.',
+        link               => 'https://github.com/Freedomwithin/CulinaryKeeper'
+    }
 );
 
 # Generate index.html
