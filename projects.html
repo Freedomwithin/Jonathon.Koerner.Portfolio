@@ -1,9 +1,10 @@
+@ -1,121 +0,0 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Jonathon Koerner</title>
+    <title>Jonathon Koerner - Web & Mobile App Developer</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -12,20 +13,40 @@
     <header>
         <nav>
             <div class="container">
-                <a href="index.html" class="logo">Jonathon Koerner</a>
+                <a href="#" class="logo">Jonathon Koerner</a>
                 <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
+        <section id="portfolio" class="hero">
+            <div class="container">
+                <h1>Jonathon Koerner: Web & Mobile App Developer</h1>
+                <p>I'm a website and mobile app developer dedicated to creating exceptional digital experiences. I combine technical expertise with a keen understanding of user experience to build solutions that are both beautiful and effective. My services encompass the full development lifecycle, from initial concept and design to development, testing, and deployment.</p>
+                <a href="#projects" class="cta-button">Explore My Work</a>
+            </div>
+        </section>
     </header>
+
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="/Users/jonathon/jobs/Jonathon.Koerner.Portfolio/images/jon.jpeg" alt="Your Headshot" class="headshot">
+            <p>I'm a passionate full-stack developer with a decade of experience building high-performing websites and mobile applications. I thrive on turning complex challenges into elegant, user-centric solutions. My expertise spans a wide range of technologies, including Python (with frameworks like Django and FastAPI), JavaScript (including React and Angular), and various database systems. I've successfully developed mobile applications for diverse sectors, from cryptocurrency analysis and prediction tools to health and wellness platforms, always focusing on maximizing user engagement and achieving client business objectives.</p>
+
+            <p>My background in high-volume business operations, coupled with my training and development experience, gives me a unique understanding of client needs. I leverage this blend of technical and business acumen to translate those needs into effective solutions, ensuring seamless user adoption. I'm adept at both front-end and back-end development, creating robust and scalable applications with clean code and a focus on maintainable architecture. I also bring strong communication and project management skills to every project, ensuring on-time and within-budget delivery. I enjoy continuous learning and am always eager to explore new technologies and expand my skillset.</p>
+
+            <p>Ready to bring your project to life? Let's connect!</p>
+        </div>
+    </section>
 
     <section id="projects" class="container">
         <h2>Projects</h2>
         <div class="project-grid">
             <div class="project">
+                <img src="" alt="Flourish">
                 <h3>Flourish - Health and Wellness Application</h3>
                 <p>A comprehensive platform for users to achieve their holistic health goals.</p>
                 <div class="project-details">
@@ -43,6 +64,7 @@
                     <a href="#" class="project-link">Learn More</a> </div>
             </div>
             <div class="project">
+                <img src="" alt="CoinSentinel">
                 <h3>CoinSentinel - Cryptocurrency Tracking and Analysis</h3>
                 <p>An advanced application empowering users to make informed investment decisions with AI-driven insights.</p>
                 <div class="project-details">
@@ -57,6 +79,7 @@
                 </div>
             </div>
             <div class="project">
+                <img src="" alt="Project Tracker">
                 <h3>Project Tracker</h3>
                 <p>A full-stack web application for efficient project, task, and note management.</p>
                 <div class="project-details">
@@ -70,8 +93,7 @@
                         <li>Responsive Design</li>
                     </ul>
                     <a href="#" class="project-link">Visit Website</a>
-                    <div class="project">
-                <h3>CulinaryKeeper</h3>
+                    <h4>CulinaryKeeper</h3>
                 <p>A expansive recipe tracker application built with the following technologies.</p>
                 <div class="project-details">
                     <p>CulinaryKeeper is an innovative recipe management application designed for food enthusiasts, home cooks, and professional chefs alike. This user-friendly platform allows you to effortlessly store, organize, and access your favorite recipes from any device. With features like ingredient tracking, meal planning, and smart search capabilities, CulinaryKeeper streamlines your cooking process from start to finish. The app also offers collaborative features, enabling users to share recipes with friends and family, discover new culinary inspirations, and build a personalized digital cookbook. Whether you are looking to preserve cherished family recipes or experiment with new flavors, CulinaryKeeper is your ultimate companion in the kitchen, helping you turn your culinary aspirations into delicious realities.</p>
@@ -86,6 +108,16 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <form action="mailto:Jonathon.Koerner@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
     <footer>
