@@ -23,13 +23,6 @@ my @projects = (
         link               => '#'
     },
     {
-        title               => 'Project Tracker',
-        short_description => 'A full-stack web application for efficient project, task, and note management.',
-        long_description  => 'Project Tracker is a full-stack web application designed to help users manage their projects, tasks, and notes efficiently. It provides a user-friendly interface built with React and Material UI for creating, viewing, updating, and deleting projects. The backend is powered by Node.js and Express, with a PostgreSQL database for persistent data. It includes features for user authentication, project management, task management, and note-taking, all within a responsive design.',
-        technologies        => 'React, Material UI, Node.js, Express, PostgreSQL',
-        link               => '#'
-    }
-    {
         title               => 'CulinaryKeeper',
         short_description => 'A expansive recipe tracker application built with the following technologies:',
         long_description  => 'CulinaryKeeper is an innovative recipe management application designed for food enthusiasts, home cooks, and professional chefs alike. This user-friendly platform allows you to effortlessly store, organize, and access your favorite recipes from any device. With features like ingredient tracking, meal planning, and smart search capabilities, CulinaryKeeper streamlines your cooking process from start to finish. The app also offers collaborative features, enabling users to share recipes with friends and family, discover new culinary inspirations, and build a personalized digital cookbook. Whether you are looking to preserve cherished family recipes or experiment with new flavors, CulinaryKeeper is your ultimate companion in the kitchen, helping you turn your culinary aspirations into delicious realities.'
