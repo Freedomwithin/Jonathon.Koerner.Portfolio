@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathon Koerner - Web & Mobile App Developer</title>
+    <title>Contact - <TMPL_VAR NAME="name"></title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -12,32 +12,35 @@
     <header>
         <nav>
             <div class="container">
-                <a href="#" class="logo">Jonathon Koerner</a>
+                <a href="index.html" class="logo"><TMPL_VAR NAME="name"></a>
                 <ul>
                     <li><a href="about.html">About</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-        </nav><section id="hero" class="hero">
-    <div class="container">
-        <h1>Welcome!</h1>
-        <p>A brief introduction to me and my projects.</p>
-        <a href="projects.html" class="cta-button">View My Work</a>
-    </div>
-</section>
-        
+        </nav>
     </header>
+
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <form action="mailto:Jonathon.Koerner@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Jonathon Koerner</p>
+            <p>&copy; 2025 <TMPL_VAR NAME="name"></p>
             <ul>
-                <li><a href="https://github.com/YourUsername" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://github.com/Freedomwithin" target="_blank"><i class="fab fa-github"></i></a></li>
                 <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
             </ul>
         </div>
     </footer>
-
 </body>
 </html>
+
